@@ -381,13 +381,13 @@ def play_video(item,desdefavoritos=False,desdedescargados=False,desderrordescarg
             
             if devuelve==0:
                 advertencia = xbmcgui.Dialog()
-                resultado = advertencia.ok("plugin" , "Scaricato con successo")
+                resultado = advertencia.ok("Download" , "Scaricato con successo")
             elif devuelve==-1:
                 advertencia = xbmcgui.Dialog()
-                resultado = advertencia.ok("plugin" , "Download interrotto")
+                resultado = advertencia.ok("Download" , "Download interrotto")
             else:
                 advertencia = xbmcgui.Dialog()
-                resultado = advertencia.ok("plugin" , "Errore nel download")
+                resultado = advertencia.ok("Download" , "Errore nel download")
         return
 
     elif opciones[seleccion]==config.get_localized_string(30154): #"Quitar de favoritos"
@@ -507,7 +507,7 @@ def play_video(item,desdefavoritos=False,desdedescargados=False,desderrordescarg
     # Si hay un tiempo de espera (como en megaupload), lo impone ahora
     if wait_time>0:
         logger.info("b2")
-        continuar = handle_wait(wait_time,server,"Caricamento vídeo...")
+        continuar = handle_wait(wait_time,server,"Caricamento video...")
         if not continuar:
             return
 

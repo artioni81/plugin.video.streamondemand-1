@@ -722,7 +722,7 @@ def download_all_episodes(item,channel,first_episode="",preferred_server="vidspo
                         try:
                             import xbmcgui
                             advertencia = xbmcgui.Dialog()
-                            resultado = advertencia.ok("plugin" , "Download interrotto")
+                            resultado = advertencia.ok("Download" , "Download interrotto")
                         except:
                             pass
                         return
